@@ -13,12 +13,52 @@ interval = 300
 [[custom_groups]]
 name = "🎥 NETFLIX"
 type = "select"
-rule = [
-    "[]🔰 节点选择",
-    "[]♻️ 自动选择",
-    "[]🎯 全球直连",
-    ".*"
-]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+#rule = ["(香港|新加坡|台湾|美国)"]
+rule = ["[]新加坡解锁", ".*"]
+
+[[custom_groups]]
+name = "🎬 DISNEY+"
+type = "select"
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+rule = ["[]新加坡解锁", "[]新加坡竞速", ".*"]
+#rule = ["(香港|新加坡|台湾|美国)"]
+#rule = [
+#    "[]新加坡",
+#    "[]香港",
+#    "[]台湾",
+#    "[]美国"
+#]
+
+[[custom_groups]]
+name = "🎞 PrimeVideo"
+type = "select"
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+rule = ["(美国)"]
+#rule = ["(香港|新加坡|台湾|美国)"]
+#rule = [
+#    "[]新加坡",
+#    "[]香港",
+#    "[]台湾",
+#    "[]美国"
+#]
+
+[[custom_groups]]
+name = "🍭 TikTok"
+type = "select"
+interval = 300
+rule = ["^(?!.*(香港)).*"]
+
+
+[[custom_groups]]
+name = "📼 Emby"
+type = "select"
+interval = 300
+rule = [".*"]
+
 
 [[custom_groups]]
 name = "⛔️ 广告拦截"
@@ -47,8 +87,8 @@ rule = ["[]🔰 节点选择",
 name = "🌏 国内媒体"
 type = "select"
 rule = ["[]🎯 全球直连",
-"(HGC|HKBN|PCCW|HKT|深台|彰化|新北|台|hk|港|tw)",
-"[]🔰 节点选择"]
+	"(HGC|HKBN|PCCW|HKT|深台|彰化|新北|台|hk|港|tw)",
+	"[]🔰 节点选择"]
 
 [[custom_groups]]
 name = "Ⓜ️ 微软服务"
@@ -61,6 +101,7 @@ rule = ["[]🎯 全球直连",
 name = "📲 电报信息"
 type = "select"
 rule = ["[]🔰 节点选择",
+"[]新加坡竞速",
 "[]🎯 全球直连",
 ".*"]
 
@@ -71,6 +112,11 @@ rule = ["[]🔰 节点选择",
 "[]🎯 全球直连",
 "[]♻️ 自动选择",
 ".*"]
+
+[[custom_groups]]
+name = "🔎 谷歌服务"
+type = "select"
+rule = ["[]♻️ 自动选择", "[]香港竞速", "[]新加坡竞速", "[]香港解锁", "[]新加坡解锁"]
 
 [[custom_groups]]
 name = "🎯 全球直连"
@@ -89,3 +135,58 @@ rule = ["[]🔰 节点选择",
 "[]🎯 全球直连",
 "[]♻️ 自动选择",
 ".*"]
+
+
+[[custom_groups]]
+name = "新加坡解锁"
+#type = "select"
+#type = "fallback"
+type = "url-test"
+rule = ["(1x SG)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "香港解锁"
+#type = "select"
+#type = "fallback"
+type = "url-test"
+rule = ["(HK)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "新加坡竞速"
+#type = "select"
+#type = "fallback"
+type = "url-test"
+rule = ["(新加坡)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "日本竞速"
+#type = "select"
+#type = "fallback"
+type = "url-test"
+rule = ["(日本)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "香港竞速"
+#type = "select"
+#type = "fallback"
+type = "url-test"
+rule = ["(香港)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+
+[[custom_groups]]
+name = "联机游戏"
+type = "select"
+#type = "fallback"
+#type = "url-test"
+rule = ["(JP|HK)"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300

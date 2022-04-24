@@ -20,7 +20,23 @@ ruleset = "rules/DivineEngine/Surge/Ruleset/Guard/Hijacking.list"
 
 [[rulesets]]
 group = "🎥 NETFLIX"
-ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/Video/Netflix.list"
+ruleset = "rules/Netflix.list"
+
+[[rulesets]]
+group = "🎬 DISNEY+"
+ruleset = "rules/lhie1/Surge/Surge 3/Provider/Media/Disney Plus.list"
+
+[[rulesets]]
+group = "🎞 PrimeVideo"
+ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/Video/Prime-Video.list"
+
+[[rulesets]]
+group = "🍭 TikTok"
+ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/Video/TikTok.list"
+
+[[rulesets]]
+group = "📼 Emby"
+ruleset = "rules/Emby.list"
 
 [[rulesets]]
 group = "🌍 国外媒体"
@@ -32,7 +48,7 @@ ruleset = "rules/lhie1/Surge/Surge 3/Provider/Media/Bilibili.list"
 
 [[rulesets]]
 group = "🌏 国内媒体"
-ruleset = "rules/lhie1/Surge/Surge 3/Provider/Media/iQiyi.list"
+ruleset = "rules/lhie1/Surge/Surge 3/Provider/Media/IQIYI.list"
 
 [[rulesets]]
 group = "🌏 国内媒体"
@@ -53,6 +69,10 @@ ruleset = "rules/lhie1/Surge/Surge 3/Provider/Media/Youku.list"
 [[rulesets]]
 group = "📲 电报信息"
 ruleset = "rules/DivineEngine/Surge/Ruleset/Extra/Telegram/Telegram.list"
+
+[[rulesets]]
+group = "🔎 谷歌服务"
+ruleset = "rules/DivineEngine/Surge/Ruleset/Extra/Google/GoogleSearch.list"
 
 [[rulesets]]
 group = "🔰 节点选择"
